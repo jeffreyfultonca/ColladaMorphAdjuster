@@ -42,9 +42,9 @@
 /* Begin PBXFileReference section */
 		FC5EBE2B1E68D4660020DE64 /* ColladaMorphAdjuster */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ColladaMorphAdjuster; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC5EBE391E68D47B0020DE64 /* ColladaMorphAdjusterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColladaMorphAdjusterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC5EBE421E68D53F0020DE64 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = SOURCE/main.swift; sourceTree = "<group>"; };
-		FC5EBE441E68D57B0020DE64 /* ColladaMorphAdjuster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColladaMorphAdjuster.swift; path = SOURCE/ColladaMorphAdjuster.swift; sourceTree = "<group>"; };
-		FC5EBE451E68D57B0020DE64 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = SOURCE/Extensions.swift; sourceTree = "<group>"; };
+		FC5EBE421E68D53F0020DE64 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		FC5EBE441E68D57B0020DE64 /* ColladaMorphAdjuster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColladaMorphAdjuster.swift; sourceTree = "<group>"; };
+		FC5EBE451E68D57B0020DE64 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FC5EBE481E6A4BD70020DE64 /* ColladaMorphAdjusterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColladaMorphAdjusterTests.swift; sourceTree = "<group>"; };
 		FC5EBE4A1E6CEB790020DE64 /* ColladaTest.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = ColladaTest.dae; sourceTree = "<group>"; };
 		FC5EBE4E1E6DEC530020DE64 /* smile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = smile.jpg; sourceTree = "<group>"; };
@@ -72,8 +72,8 @@
 		FC5EBE221E68D4660020DE64 = {
 			isa = PBXGroup;
 			children = (
-				FC5EBE411E68D50E0020DE64 /* SOURCE */,
-				FC5EBE3A1E68D47B0020DE64 /* TESTS */,
+				FC5EBE411E68D50E0020DE64 /* Source */,
+				FC5EBE3A1E68D47B0020DE64 /* Tests */,
 				FC5EBE2C1E68D4660020DE64 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,33 +87,33 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FC5EBE3A1E68D47B0020DE64 /* TESTS */ = {
+		FC5EBE3A1E68D47B0020DE64 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				FC5EBE9E1E6E1ED30020DE64 /* resources */,
 				FC5EBE481E6A4BD70020DE64 /* ColladaMorphAdjusterTests.swift */,
 				FC5EBE9C1E6E1EC10020DE64 /* ExtensionsTest.swift */,
+				FC5EBE9E1E6E1ED30020DE64 /* Resources */,
 			);
-			path = TESTS;
+			path = Tests;
 			sourceTree = "<group>";
 		};
-		FC5EBE411E68D50E0020DE64 /* SOURCE */ = {
+		FC5EBE411E68D50E0020DE64 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				FC5EBE421E68D53F0020DE64 /* main.swift */,
 				FC5EBE441E68D57B0020DE64 /* ColladaMorphAdjuster.swift */,
 				FC5EBE451E68D57B0020DE64 /* Extensions.swift */,
-				FC5EBE421E68D53F0020DE64 /* main.swift */,
 			);
-			name = SOURCE;
+			path = Source;
 			sourceTree = "<group>";
 		};
-		FC5EBE9E1E6E1ED30020DE64 /* resources */ = {
+		FC5EBE9E1E6E1ED30020DE64 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FC5EBE4E1E6DEC530020DE64 /* smile.jpg */,
 				FC5EBE4A1E6CEB790020DE64 /* ColladaTest.dae */,
+				FC5EBE4E1E6DEC530020DE64 /* smile.jpg */,
 			);
-			name = resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,18 +161,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Jonathan Allee";
 				TargetAttributes = {
 					FC5EBE2A1E68D4660020DE64 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 4V6JCNLB92;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 					FC5EBE381E68D47B0020DE64 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 4V6JCNLB92;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -249,15 +250,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -298,15 +307,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -326,6 +343,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
 		};
@@ -338,7 +356,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -350,7 +369,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -366,7 +386,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alleeobscura.TESTS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "";
 			};
 			name = Debug;
@@ -383,7 +404,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alleeobscura.TESTS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "";
 			};
 			name = Release;
